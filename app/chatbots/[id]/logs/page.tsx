@@ -1,9 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import AdminLayout from '@/components/admin/AdminLayout';
-import { Button } from '@/components/common';
 import type { SidebarNavItem, SidebarUserInfo, BreadcrumbItem } from '@/components/admin';
 
 // Navigation items
@@ -138,7 +136,6 @@ const getStatusBadge = (status: 'processing' | 'success' | 'failed') => {
 };
 
 export default function KnowledgeBaseLogsPage() {
-  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const [eventTypeFilter, setEventTypeFilter] = useState('all');
   const [userFilter, setUserFilter] = useState('all');
@@ -152,9 +149,9 @@ export default function KnowledgeBaseLogsPage() {
       userInfo={userInfo}
       breadcrumbs={breadcrumbs}
       navbarActions={
-        <button className="text-[#9da6b9] hover:text-white transition-colors">
+        <a href="/notifications" className="text-[#9da6b9] hover:text-white transition-colors">
           <span className="material-symbols-outlined">notifications</span>
-        </button>
+        </a>
       }
     >
       <div className="flex flex-col gap-6 pb-20">

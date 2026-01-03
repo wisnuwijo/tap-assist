@@ -9,6 +9,7 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export default function Button({
@@ -20,6 +21,7 @@ export default function Button({
   onClick,
   className = '',
   disabled = false,
+  type = 'button',
 }: ButtonProps) {
   const baseStyles = 'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
@@ -38,6 +40,7 @@ export default function Button({
 
   return (
     <button
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}

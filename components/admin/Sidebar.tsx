@@ -73,7 +73,10 @@ export default function Sidebar({
       {/* Footer Section */}
       <div className="flex flex-col gap-2 px-2">
         {userInfo && (
-          <div className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#282e39] cursor-pointer transition-colors">
+          <a
+            href="/profile"
+            className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[#282e39] cursor-pointer transition-colors"
+          >
             {userInfo.avatarUrl ? (
               <div
                 className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
@@ -91,7 +94,7 @@ export default function Sidebar({
               <p className="text-white text-sm font-medium leading-snug truncate">{userInfo.name}</p>
               <p className="text-[#9da6b9] text-xs leading-snug truncate">{userInfo.email}</p>
             </div>
-          </div>
+          </a>
         )}
 
         {showLogout && (

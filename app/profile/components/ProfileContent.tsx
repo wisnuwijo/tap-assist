@@ -218,7 +218,7 @@ export default function ProfileContent() {
                     </div>
                     <div>
                         <a
-                            href="#"
+                            href="/settings"
                             className="text-sm font-medium text-primary hover:text-primary/80 flex items-center gap-1 group"
                         >
                             Manage advanced notification settings

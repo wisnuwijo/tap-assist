@@ -35,12 +35,12 @@ export default function ProfilePage() {
             userInfo={userInfo}
             breadcrumbs={breadcrumbs}
             navbarActions={
-                <button className="text-[#9da6b9] hover:text-white transition-colors relative">
+                <a href="/notifications" className="text-[#9da6b9] hover:text-white transition-colors relative">
                     <span className="material-symbols-outlined">notifications</span>
                     <span className="absolute top-2.5 right-2.5 size-2 bg-red-500 rounded-full border-2 border-white dark:border-[#111318]"></span>
-                </button>
+                </a>
             }
-            showLogout={true}
+            showLogout={false}
         >
             <div className="flex-1 overflow-y-auto px-8 pt-6 pb-12 relative">
                 <div className="max-w-5xl mx-auto">

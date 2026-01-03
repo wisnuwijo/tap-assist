@@ -50,9 +50,9 @@ export default function ChatbotDetailPage({ params }: { params: { id: string } }
       userInfo={userInfo}
       breadcrumbs={breadcrumbs}
       navbarActions={
-        <button className="text-[#9da6b9] hover:text-white transition-colors">
+        <a href="/notifications" className="text-[#9da6b9] hover:text-white transition-colors">
           <span className="material-symbols-outlined">notifications</span>
-        </button>
+        </a>
       }
     >
       <div className="flex flex-col gap-6 pb-24">

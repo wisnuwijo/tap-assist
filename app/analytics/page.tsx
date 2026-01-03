@@ -130,9 +130,9 @@ export default function AnalyticsPage() {
       userInfo={userInfo}
       breadcrumbs={breadcrumbs}
       navbarActions={
-        <button className="text-[#9da6b9] hover:text-white transition-colors">
+        <a href="/notifications" className="text-[#9da6b9] hover:text-white transition-colors">
           <span className="material-symbols-outlined">notifications</span>
-        </button>
+        </a>
       }
     >
       <div className="flex flex-col gap-8 pb-20">
